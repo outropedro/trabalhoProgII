@@ -97,7 +97,6 @@ public class Game
         // tree = new Item("Tree", "This is a tree", "5000 kilos");
         // ax = new Item("Ax", "This is a ax", "2 kilos");
 
-        HashMap<String,Item> itens; //TODO olhar como fazer adaptação necessaria;String = nome, Item = variavel item
         //TODO adicionar ArrayList na criação do item
     }
 

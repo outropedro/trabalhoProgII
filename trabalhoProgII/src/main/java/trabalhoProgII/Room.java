@@ -44,16 +44,13 @@ public class Room
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Room neighbor)
+    public void setExit(String direction, Room neighbor, String item)
     {
-        //TODO FAZER IMPLEMENTAÇÃO DOS ITENS AS SALAS
-
-        //com item adiciona agora o item a sala
-        exits.put(direction, neighbor);
+        exits.put(direction, neighbor, addItem(item););
     }
 
-    public void setItem(nome do item e o item em si){
-        //fazer segundo examplo do setItens
+    public void addItem(String item, Item itens){
+       itens.put(String item, Item itens);
     }
 
 
