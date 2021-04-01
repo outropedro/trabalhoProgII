@@ -1,4 +1,3 @@
-import java.util.HashMap;
 // Início do código refatorado para inserção da classe Player (proposta Ian)
 
     /**
@@ -90,14 +89,18 @@ public class Game
 
     //CRIA OS ITENS, OLHAR AO CERTO COMO FAZER
     public void createItens(){
-        // Item book, desk, computer, keys, tree, rock, ax;
-		// book = new Item("Books", "This is a book", "100 grams");
-        // desk = new Item("Desk", "This is a desk", "5 kilos");
-        // keys = new Item("Keys", "This is a few keys", "5 grams");
-        // tree = new Item("Tree", "This is a tree", "5000 kilos");
-        // ax = new Item("Ax", "This is a ax", "2 kilos");
+        Item book, desk, computer, keys, tree, rock, ax;
+		
+        book = new Item("Book", "This is a book", 0.5, true);// padrão criação dos items
+
+        book.addItem("book", book);
 
         //TODO adicionar ArrayList na criação do item
+    }
+
+    // adiciona item a sala
+    public void addItemToRoom(){
+        // criar metodo 
     }
 
     /**

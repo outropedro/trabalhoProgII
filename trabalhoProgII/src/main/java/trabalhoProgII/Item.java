@@ -1,27 +1,35 @@
+import java.lang.String;
+import java.util.HashMap;
 
 public class Item{
     
     private String itemName;
 	private String itemDescription;
-	private int itemWeight;
+	private double itemWeight;
 	private boolean itemCanTake; //itens que podem serem pegos
 
+	private HashMap<String,Item> itens;         // armazena os itens das das salas
+
+
 	
-	public Item(String itemName, String itemDescription, int itemWeight){
+	public Item(String itemName, String itemDescription, double itemWeight, boolean itemCanTake){
 		this.itemName = itemName;
 		this.itemDescription = itemDescription;
 		this.itemWeight = itemWeight;
 		this.itemCanTake = true;
-		// atribuir valor se pode
+		itens = new HashMap<String, Item>();	
 	}
 
-	//create itens
-    // public void createItem(){
-	// 	Item book, desk, computer, keys, trees, rock, ax;
-	// 	book = new Item();
-	
-	
-    // }
+	/**
+     * adiciona intens das salas
+     * @param nameItem nome do item
+     * @param itemObject item referecnaciado
+     */
+    public void addItem(String nameItem, Item itemObject)
+    {
+        itens.put(nameItem, itemObject);// olhar pq ta dando erro
+		
+    }
 
 	public boolean itemCanTake(){
 		return this.itemCanTake();
@@ -47,16 +55,16 @@ public class Item{
 		this.itemDescription = itemDescription;
 	}
 
-	public int getItemWeight() {
+	public double getItemWeight() {
 		return this.itemWeight;
 	}
 
-	public void setItemWeight(int itemWeight) {
+	public void setItemWeight(double itemWeight) {
 		this.itemWeight = itemWeight;
 	}
 
 	//TODO fazer setagem do item
-	public void setItem(String itemName, String itemWeight){
+	public void setItem(String itemName, double itemWeight){
 		// itens.put(itemName, itemWeight);
 	}
 
